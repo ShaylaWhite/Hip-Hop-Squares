@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Hip Hop Squares</title>
+</head>
+
+
+
+<body>
+  <div class="hip-hop-squares">
+    <div class="avatar-selection">
+
+      <label for="avatar">Choose a Rapper Avatar:</label>
+      <select id="avatar" name="avatar">
+        <option value="drake">Drake</option>
+        <option value="kendrick">Kendrick Lamar</option>
+        <option value="cardi">Cardi B</option>
+        <!-- Add more options for other rappers -->
+      </select>
+      <button id="set-avatar">Set Avatar</button>
+ 
+    </div>
+    <div class="game-board">
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+    </div>
+  </div>
+  
+  <button id="replay-button">Replay</button>
+
+  <div id="winner-display" class="winner-display">
+    Winner: <span id="winner-name"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
