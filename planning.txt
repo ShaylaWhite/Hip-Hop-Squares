@@ -1,0 +1,69 @@
+Big Goals
+    Build a web application from scratch, without a starter codebase
+    Use your programming skills to work out the game logic for a simple game like Tic Tac Toe
+    Separate HTML, CSS, and JavaScript files in your application
+    Build an application to a specification that someone else gives you
+    Build a dynamic game that allows two players to compete from the same computer
+    Craft a README.md file that explains your app to the world
+
+
+Technical Requirements
+Your Tic Tac Toe app must:
+    Render a game board in the browser
+    Switch turns between X and O (or whichever markers you select)
+    Visually display which side won if a player gets three in a row, or show a draw if neither player wins
+    Include separate HTML / CSS / JavaScript files
+    Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
+    Use JavaScript for DOM manipulation
+    Deploy your game online, where the rest of the world can access it
+    You can use GitHub Pages for deploying your project
+    Use semantic markup for HTML and CSS (adhere to best practices)
+    Have well-formatted, and well-commented code
+
+User Stories
+    As a user, I should be able to start a new tic tac toe game
+    As a user, I should be able to click on a square to add X first and then O, and so on
+    As a user, I should be shown a message after each turn for if I win, lose, tie or who's turn it is next
+    As a user, I should not be able to click the same square twice
+    As a user, I should be shown a message when I win, lose or tie
+    As a user, I should not be able to continue playing once I win, lose, or tie
+    As a user, I should be able to play the game again without refreshing the page
+
+Project Outline:
+
+ **Pseudocode:** 
+ Initialize game grid (empty cells) 
+ Initialize current player (Player 1)
+Listen for cell clicks On click: If cell is empty: Place current player's avatar in cell Check for a win or draw Switch current player
+Else: Show error (cell is already occupied) 
+
+**Starter Code:** 
+1. **HTML:** 
+2. **CSS (styles.css):** 
+3. **JavaScript (script.js):** 
+
+
+
+
+
+Minium Project Requirements:
+
+
+
+
+
+Hopeful Features:
+
+1. Apply CSS styles to enhance the game's visual appearance.
+2. Add animations and hover effects to avatars and cells. 
+3. Customize styling based on the selected rapper avatars. 
+4. Add Sound Effects and Music  
+    1. Incorporate sound effects for moves and button clicks. 
+    2. Integrate audio playback for each player's victory. 
+    3. Test sound and music across different scenarios. 
+
+5.Implement Additional Features 
+    1. Integrate a trophy case to display achievements.
+    2. Create player ranks based on the number of wins. 
+    3. Add customization options for background and fonts. 
+    4. Introduce dynamic grid sizing or alternate win patterns. 
