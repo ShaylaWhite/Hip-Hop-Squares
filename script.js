@@ -20,15 +20,15 @@ let totalMoves = 0; // No moves have been made yet
     // >>> Emojis for players imported from the api
     // >>>> Map rapper names to their corresponding emoji names
     const rapperEmojis = {
-        drake: '\u{1F989}',     // 🦉
-        kendrick: '\u{1F977}',  // 🥷
-        cardi: '\u{1F4B0}',     // 💰
-        jayz: '\u{1F410}',      // 🐐
-        nipsey: '\u{1F3C1}',    // 🏁
-        megan: '\u{1F40E}',     // 🐎
-        jeezy: '\u{2744}',      // ❄️
-        dolph: '\u{1F42C}',     // 🐬
-        snoop: '\u{1F33F}'      // 🌿
+        Drake: '\u{1F989}',     // 🦉
+        Kendrick: '\u{1F977}',  // 🥷
+        CardiB: '\u{1F4B0}',     // 💰
+        JayZ: '\u{1F410}',      // 🐐
+        Nipsey: '\u{1F3C1}',    // 🏁
+        MeganTheeStallion: '\u{1F40E}',     // 🐎
+        Jeezy: '\u{2744}',      // ❄️
+        Dolph: '\u{1F42C}',     // 🐬
+        SnoopDogg: '\u{1F33F}'      // 🌿
     };
     
     // Initialize player objects with default values and the logic to choose rapper and match it to its corresponding emoji
