@@ -27,8 +27,8 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-right: -269px; /* Adjust the right margin */
-  margin-left: 23px; /* Remove the left margin */
+  margin-right: -2px; /* Adjust the right margin */
+  margin-left: 3px; /* Remove the left margin */
   margin-top: 33px;
 }
 
@@ -40,7 +40,12 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-
+select {
+  font-size: 16px;
+  height: 40px; 
+  padding: 5px; 
+  width: 200px; /* Adjust the width as needed */
+}
 /* Adjust margin for the h1 and button inside game-setup */
 .game-setup h1,
 .game-setup button {
@@ -73,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 70px;
+  margin-left: 7px;
 }
 
 .player {
@@ -86,7 +91,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px -190px 0 -90px; /* Adjust top and bottom margins */
+  margin: 10px -190px 0 9px; /* Adjust top and bottom margins */
 }
 
 /* ACTUAL GAME BOARD */
@@ -104,7 +109,7 @@ body {
 /* SCOREBOARD STYLES */
 .scoreboard {
   width: 20%; /* Adjust width as needed */
-  margin: 30px 80px 0px -80px; /* Adjust top margin, center horizontally */
+  margin: 30px 80px 0px 8px; /* Adjust top margin, center horizontally */
   padding: 23px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
