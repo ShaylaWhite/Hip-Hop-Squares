@@ -1,41 +1,215 @@
-/* Center and align elements */
-.hip-hop-squares {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-  }
-  
-  .avatar-selection {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .game-board {
-    text-align: center;
-    display: inline-block; 
-    border: 4px solid #000000;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .row {
-    display: flex;
-  }
-  
-  .cell {
-    flex: 1;
-    padding: 20px;
-    font-size: 24px;
-    border: 1px solid #ddd; /* Add inner lines */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .cell:hover {
-    background-color: #eee;
-  }
-  
+/* RESET SOME DEFAULT STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY STYLES */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fcfcfc;
+}
+
+/* LANDING PAGE LAYOUT */
+.landing-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
+  min-height: 100vh;
+  margin: 0 auto; /* Center horizontally */
+  overflow: hidden;
+}
+/* GAME SETUP COLUMN STYLES */
+.game-setup-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: -269px; /* Adjust the right margin */
+  margin-left: 23px; /* Remove the left margin */
+  margin-top: 33px;
+}
+
+/* CENTER ALIGN CONTENT */
+.game-setup,
+.player-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Adjust margin for the h1 and button inside game-setup */
+.game-setup h1,
+.game-setup button {
+  margin: 0 0 0 70px;
+} 
+
+/* START BUTTON STYLES */
+#start-button,
+#replay-button {
+  margin-top: 20px; /* Adjust margin for spacing */
+  padding: 10px 30px; /* Adjust padding for button size */
+  font-size: 16px; /* Increase font size for better visibility */
+  background-color: #000000; /* Set background color */
+  color: #ffffff; /* Set text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Add cursor pointer on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+}
+
+/* HOVER EFFECT FOR START BUTTON */
+#start-button:hover,
+#replay-button:hover {
+  background-color: #555; /* Change the background color when hovered */
+}
+
+/* PLAYER SECTION STYLES */
+.player-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 70px;
+}
+
+.player {
+  margin: 10px 0;
+}
+
+/* GAME BOARD CONTAINER STYLES */
+.game-board-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px -190px 0 -90px; /* Adjust top and bottom margins */
+}
+
+/* ACTUAL GAME BOARD */
+.game-board {
+  position: relative;
+  width: 540px; /* Adjust the width to make it a larger square */
+  height: 500px; /* Adjust the height to make it a larger square */
+  border: 4px solid #000;
+  display: grid; /* Use CSS grid for the 3x3 grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  grid-template-rows: repeat(3, 1fr); /* Create 3 equal rows */
+  gap: 4px; /* Add gap between squares */
+}
+
+/* SCOREBOARD STYLES */
+.scoreboard {
+  width: 20%; /* Adjust width as needed */
+  margin: 30px 80px 0px -80px; /* Adjust top margin, center horizontally */
+  padding: 23px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+/* SQUARE STYLES */
+.square {
+  width: 100%; /* Each square occupies the entire cell */
+  height: 100%;
+  background-color: #1b1b1b; /* Set the initial background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer; /* Add cursor pointer on hover */
+  transition: background-color 0.3s ease; /* Add transition effect */
+  border: 2px solid #000; /* Add border around each square */
+}
+
+/* HOVER EFFECT FOR SQUARES */
+.square:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
+/* BOARD LINES FOR TIC-TAC-TOE CELLS */
+.board-line {
+  position: absolute;
+  background-color: #000;
+}
+
+/* HORIZONTAL LINES */
+.horizontal-line {
+  width: 100%;
+  height: 4px;
+  top: 33.33%;
+  transform: translateY(-50%);
+}
+
+/* VERTICAL LINES */
+.vertical-line {
+  width: 4px;
+  height: 100%;
+  left: 33.33%;
+  transform: translateX(-50%);
+}
+/* CURRENT WINNER SECTION */
+.current-winner {
+  text-align: center;
+  margin: 20px auto;/* Adjust top and bottom margins and center horizontally */
+}
+
+/* HALL OF FAME SECTION */
+.hall-of-fame-container {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto; /* Adjust top and bottom margins and center horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 300px;
+  margin-bottom: 20px;
+ 
+}
+
+/* HALL OF FAME LABEL STYLES */
+.hall-of-fame-label {
+  font-weight: bold;
+  font-size: 24px; /* Increase font size for header */
+  margin-bottom: 10px;
+}
+
+/* HALL OF FAME SUBHEADER STYLES */
+.hall-of-fame-subheader {
+  font-size: 16px; /* Adjust font size for subheader */
+  margin-bottom: 10px;
+}
+
+/* HALL OF FAME TABLE STYLES */
+.hall-of-fame-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; /* Collapse table borders */
+  border: none; /* Remove border from table */
+  margin-top: 20px;
+}
+
+/* HALL OF FAME TABLE HEADER STYLES */
+.hall-of-fame-table th {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: none; /* Remove border from header cells */
+}
+
+/* HALL OF FAME TABLE CELL STYLES */
+.hall-of-fame-table td {
+  padding: 10px;
+  border: none; /* Remove border from table cells */
+}
+
+/* HALL OF FAME WINNER EMOJI */
+.hall-of-fame-emoji {
+  font-size: 30px; /* Adjust the size as needed */
+  margin-right: 10px;
+}

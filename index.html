@@ -6,46 +6,108 @@
   <link rel="stylesheet" href="style.css">
   <title>Hip Hop Squares</title>
 </head>
-
-
-
 <body>
-  <div class="hip-hop-squares">
-    <div class="avatar-selection">
+  <div class="landing-page">
 
-      <label for="avatar">Choose a Rapper Avatar:</label>
-      <select id="avatar" name="avatar">
-        <option value="drake">Drake</option>
-        <option value="kendrick">Kendrick Lamar</option>
-        <option value="cardi">Cardi B</option>
-        <!-- Add more options for other rappers -->
-      </select>
-      <button id="set-avatar">Set Avatar</button>
- 
-    </div>
-    <div class="game-board">
-      <div class="row">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+    <!-- Game Setup and Player Info Column -->
+    <div class="game-setup-column">
+      <!-- Game Setup Section -->
+      <div class="game-setup">
+        <h1>Hip Hop Squares</h1>
+        <button id="start-button">Start Game</button>
+              <!-- Replay Button -->
+      <button id="replay-button">Replay</button>
       </div>
-      <div class="row">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
-      <div class="row">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
-    </div>
-  </div>
-  
-  <button id="replay-button">Replay</button>
 
-  <div id="winner-display" class="winner-display">
-    Winner: <span id="winner-name"></span>
+      <!-- Player Avatar Selection Section -->
+      <div class="player-section">
+        <!-- Player 1 Avatar Selection -->
+        <div class="player">
+          <h2>Player 1</h2>
+          <label for="player1-avatar">Choose a Rapper Avatar:</label>
+          <select id="player1-avatar" name="player1-avatar">
+            <option value="drake">Drake</option>
+            <option value="kendrick">Kendrick Lamar</option>
+            <option value="cardi">Cardi B</option>
+            <!-- Add more options for other rappers -->
+          </select>
+        </div>
+      
+        <!-- Player 2 Avatar Selection -->
+        <div class="player">
+          <h2>Player 2</h2>
+          <label for="player2-avatar">Choose a Rapper Avatar:</label>
+          <select id="player2-avatar" name="player2-avatar">
+            <option value="drake">Drake</option>
+            <option value="kendrick">Kendrick Lamar</option>
+            <option value="cardi">Cardi B</option>
+            <!-- Add more options for other rappers -->
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- /Game Setup and Player Info Column -->
+    
+    <!-- Game Board Section -->
+    <div class="game-board-container">
+      <div class="game-board">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+
+      
+    </div>
+
+        
+
+    <!-- /Game Board Section -->
+
+    <!-- Scoreboard Section -->
+  <div class="scoreboard">
+       <!-- Current Game Winner Display -->
+       <div class="current-winner" id="current-winner">
+        Current Round Winner: <span id="current-winner-name"></span> Shayla
+    <div class="hall-of-fame-container">
+      
+      <div class="hall-of-fame-label">Hall of Fame</div>
+      <div class="hall-of-fame-subheader">Top Players</div>
+      <table class="hall-of-fame-table">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Emoji</th>
+            <th>Wins</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Player 1</td>
+            <td>😀</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Player 2</td>
+            <td>🎉</td>
+            <td>4</td>
+          </tr>
+          <!-- Add more rows for players here -->
+        </tbody>
+      </table>
+
+    
+        </div>
+    </div>
+
+
+<!-- /Scoreboard Section -->
+
   </div>
 
   <script src="script.js"></script>
