@@ -112,33 +112,34 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: white;
   gap: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   border: 2px solid #000;
   padding: 20px;
 }
-
 /* Square Styles */
 .square {
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for transparency */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: 2px solid #fff;
-  color: #fff;
+  cursor: ;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+  border: 4px solid #fff;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Added glow effect */
 }
 
 /* Hover effect for squares */
 .square:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value for transparency */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.9); /* Increased glow on hover */
 }
-
 /* Board Lines for Tic-Tac-Toe Cells */
 .board-line {
   position: absolute;
@@ -172,6 +173,7 @@ body {
   width: 100%;
   max-width: 800px;
   text-align: center;
+  background-color: white;
   border: 2px solid #ddd;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
