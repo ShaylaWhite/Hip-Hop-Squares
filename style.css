@@ -27,8 +27,8 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-right: -2px; /* Adjust the right margin */
-  margin-left: 3px; /* Remove the left margin */
+  margin-right: 0; /* Remove the right margin */
+  margin-left: 0; /* Remove the left margin */
   margin-top: 33px;
 }
 
@@ -91,7 +91,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px -190px 0 9px; /* Adjust top and bottom margins */
+  margin: 10px auto; /* Adjust the top margin, and center horizontally */
 }
 
 /* ACTUAL GAME BOARD */
@@ -109,7 +109,7 @@ select {
 /* SCOREBOARD STYLES */
 .scoreboard {
   width: 20%; /* Adjust width as needed */
-  margin: 30px 80px 0px 8px; /* Adjust top margin, center horizontally */
+  margin: 30px auto 0; 
   padding: 23px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
