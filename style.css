@@ -8,9 +8,10 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #fcfcfc;
-  background-image: url('images/bg.jpg');
+  background-image: url('wp4818128.jpg');
   background-size: cover;
-}ainer for each section */
+}
+/* Container for each section */
 .section-container {
   display: flex;
   align-items: center;
