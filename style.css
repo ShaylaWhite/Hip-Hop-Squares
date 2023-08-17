@@ -92,8 +92,8 @@ body {
 /* ACTUAL GAME BOARD */
 .game-board {
   position: relative;
-  width: 540px; /* Adjust the width to make it a larger square */
-  height: 500px; /* Adjust the height to make it a larger square */
+  width: 940px; /* Adjust the width to make it a larger square */
+  height: 800px; /* Adjust the height to make it a larger square */
   border: 4px solid #000;
   display: grid; /* Use CSS grid for the 3x3 grid layout */
   grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
