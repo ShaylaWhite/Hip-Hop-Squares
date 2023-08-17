@@ -25,7 +25,7 @@ let totalMoves = 0; // No moves have been made yet
         CardiB: '\u{1F4B0}',     // 💰
         JayZ: '\u{1F410}',      // 🐐
         Nipsey: '\u{1F3C1}',    // 🏁
-        MeganTheeStallion: '\u{1F40E}',     // 🐎
+        MeganTheeStallion: '\u{1F40E}',// 🐎
         Jeezy: '\u{2744}',      // ❄️
         Dolph: '\u{1F42C}',     // 🐬
         SnoopDogg: '\u{1F33F}'      // 🌿
@@ -68,9 +68,6 @@ function initializeAvatarDropdowns() {
   // Call the function to initialize the dropdowns
   initializeAvatarDropdowns();
   
-  
-  
- 
   
   
 
