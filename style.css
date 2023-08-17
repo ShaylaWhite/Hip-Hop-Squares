@@ -168,7 +168,7 @@ select {
   border: 2px solid #ddd;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin: 20px auto; /* Adjust top and bottom margins and center horizontally */
+  margin: 20px auto 20px auto;/* Adjust top and bottom margins and center horizontally */
   display: flex;
   flex-direction: column;
   justify-content: center;
