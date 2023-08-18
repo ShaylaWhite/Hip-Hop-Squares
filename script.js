@@ -67,76 +67,95 @@ document.addEventListener("DOMContentLoaded", function() {
     initializeGame();
   
     // Function to start the game
-    function startGame() {
-      resetGame();
-      startButton.disabled = true; // Disable the start button after starting
+function startGame() {
+    resetGame();
+    startButton.disabled = true; // Disable the start button after starting
   
-      // Assign emojis based on dropdown selections for both players
-      player1.emoji = rapperEmojis[player1AvatarDropdown.value];
-      player2.emoji = rapperEmojis[player2AvatarDropdown.value];
+    // Assign emojis based on dropdown selections for both players
+    player1.emoji = rapperEmojis[player1AvatarDropdown.value];
+    player2.emoji = rapperEmojis[player2AvatarDropdown.value];
   
-      // Update UI with player emojis
-      player1Emoji.textContent = player1.emoji; // Set emoji for player 1
-      player2Emoji.textContent = player2.emoji; // Set emoji for player 2
+    // Update UI with player emojis
+    player1Emoji.textContent = player1.emoji; // Set emoji for player 1
+    player2Emoji.textContent = player2.emoji; // Set emoji for player 2
   
-      // Enable the Replay button
-      replayButton.disabled = false;
-    }
+    // Enable the Replay button
+    replayButton.disabled = false;
+  }
   
-    // Function to reset the game
-    function resetGame() {
-      gameBoard = Array(9).fill("");
-      currentPlayer = player1;
-      isGameOver = false;
+  function resetGame() {
+    gameBoard = Array(9).fill("");
+    currentPlayer = player1;
+    isGameOver = false;
   
-      squares.forEach(square => {
-        square.textContent = "";
-        square.classList.remove("winning-square");
-      });
+    squares.forEach(square => {
+      square.textContent = "";
+      square.classList.remove("winning-square");
+    });
   
-      currentWinnerName.textContent = "";
-    }
+    currentWinnerName.textContent = "";
+  }
+  function replayGame() {
+    resetGame();
+    startButton.disabled = true; // Disable the start button
+    replayButton.disabled = false; // Enable the Replay button
+  }
   
-    // Function to replay the game
-    function replayGame() {
-      resetGame();
-      startButton.disabled = false; // Enable the start button
-      replayButton.disabled = true; // Disable the Replay button
-    }
+  // Event listeners for buttons
+  startButton.addEventListener("click", startGame);
+  replayButton.addEventListener("click", replayGame);
   
-    // Function to handle a move
+  
     function handleMove(squareIndex) {
-      if (!isGameOver && gameBoard[squareIndex] === "") {
-        gameBoard[squareIndex] = currentPlayer;
-        squares[squareIndex].textContent = currentPlayer.emoji;
-  
-        if (checkForWinner(currentPlayer)) {
-          isGameOver = true;
-          showWinner(currentPlayer);
-        } else if (gameBoard.every(square => square !== "")) {
-          isGameOver = true;
-          showDraw();
-        } else {
-          currentPlayer = currentPlayer === player1 ? player2 : player1;
+        if (!isGameOver && gameBoard[squareIndex] === "") {
+          gameBoard[squareIndex] = currentPlayer;
+          squares[squareIndex].textContent = currentPlayer.emoji;
+    
+          if (checkForWinner(currentPlayer)) {
+            isGameOver = true;
+            showWinner(currentPlayer);
+          } else if (gameBoard.every(square => square !== "")) {
+            isGameOver = true;
+            showDraw();
+          } else {
+            currentPlayer = currentPlayer === player1 ? player2 : player1;
+          }
         }
       }
-    }
-  
-    // Function to check for a win
-    function checkForWinner(player) {
-      // (existing checkWinner logic)
-    }
-  
-    // Function to display winner
-    function showWinner(player) {
-      // (existing showWinner logic)
-    }
-  
-    // Function to display draw
-    function showDraw() {
-      // (existing showDraw logic)
-    }
-  
+    
+      
+      function checkForWinner(player) {
+        // Example: Check the gameBoard for winning combinations
+        const winningCombinations = [
+          [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+          [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+          [0, 4, 8], [2, 4, 6] // Diagonals
+        ];
+      
+        for (const combination of winningCombinations) {
+          const [a, b, c] = combination;
+          if (gameBoard[a] === player && gameBoard[b] === player && gameBoard[c] === player) {
+            return true; // Player has won
+          }
+        }
+        return false; // No winner yet
+      }
+      
+      function showWinner(player) {
+        const selectedRapperName = player === player1 ? player1AvatarDropdown.value : player2AvatarDropdown.value;
+      
+        // Display a message that the player has won along with the rapper's name
+        currentWinnerName.textContent = `${player.name} wins! (${selectedRapperName})`;
+      
+        player.wins++;
+        updateScoreboard();
+      }
+
+      function showDraw() {
+       
+        currentWinnerName.textContent = "It's a draw!";
+      }
+      
     // Event listeners for buttons and squares
     startButton.addEventListener("click", startGame);
     replayButton.addEventListener("click", replayGame);
@@ -151,4 +170,32 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+  
+//   //// HALL OF FAME ////
+// // Function to update the Hall of Fame table
+// function updateHallOfFameTable() {
+//     // Compare player wins to determine the top player
+//     let topPlayer;
+//     if (player1.wins > player2.wins) {
+//       topPlayer = player1;
+//     } else if (player2.wins > player1.wins) {
+//       topPlayer = player2;
+//     }
+  
+//     // Update the Hall of Fame table with the top player's info
+//     const hallOfFameTable = document.querySelector(".hall-of-fame-table");
+//     const hallOfFamePlayerName = document.querySelector(".hall-of-fame-player-name");
+//     const hallOfFamePlayerEmoji = document.querySelector(".hall-of-fame-player-emoji");
+//     const hallOfFamePlayerWins = document.querySelector(".hall-of-fame-player-wins");
+  
+//     if (topPlayer) {
+//       hallOfFamePlayerName.textContent = topPlayer.name;
+//       hallOfFamePlayerEmoji.textContent = topPlayer.emoji;
+//       hallOfFamePlayerWins.textContent = topPlayer.wins;
+//     } else {
+//       hallOfFamePlayerName.textContent = "No top player yet";
+//       hallOfFamePlayerEmoji.textContent = "";
+//       hallOfFamePlayerWins.textContent = "";
+//     }
+//   }
   
