@@ -123,22 +123,35 @@ body {
 .square {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for transparency */
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  cursor: ;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-  border: 4px solid #fff;
-  color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Added glow effect */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 10px solid #000000;
+  color: #000000;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  animation: glow 2s infinite; /* Added animation */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 90px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 19px rgba(255, 255, 255, 0.7);
+  }
 }
 
 /* Hover effect for squares */
 .square:hover {
-  background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value for transparency */
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.9); /* Increased glow on hover */
+  background-color: rgb(255, 129, 129); /* Adjust the alpha value for transparency */
+  box-shadow: 70px 0 90px rgba(255, 0, 0, 0.9); /* Increased glow on hover */
 }
 /* Board Lines for Tic-Tac-Toe Cells */
 .board-line {
