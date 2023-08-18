@@ -44,19 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
       Jeezy: '❄️',
       Dolph: '🐬',
       SnoopDogg: '🌿',
-    }; 
-
-    const rapperImages = {
-        Drake: 'images/drake.jpg',
-        Kendrick: 'images/kendrick.jpg',
-        CardiB: 'images/cardib.jpg',
-        JayZ: 'images/jayz.jpg',
-        Nipsey: 'images/nipsey.jpg',
-        MeganTheeStallion: 'images/megan.jpg',
-        Jeezy: 'images/jeezy.jpg',
-        Dolph: 'images/dolph.jpg',
-        SnoopDogg: 'images/snoopdogg.jpg',
-      };
+    };
   
     // Function to initialize player avatar dropdowns with options
     function initializeAvatarDropdowns() {
@@ -172,44 +160,26 @@ function startGame() {
       function showWinner(player) {
         const selectedRapperName = player === player1 ? player1AvatarDropdown.value : player2AvatarDropdown.value;
       
-        // Display a message that the player has won along with the rapper's name
-        currentWinnerName.textContent = `${player.name} wins! (${selectedRapperName})`;
-      
-        // Create an <img> element for the winning player's avatar
-        const winnerAvatar = document.createElement("img");
-        winnerAvatar.src = rapperImages[selectedRapperName];
-        winnerAvatar.alt = `${player.name} Avatar`;
-      
-        // Clear the existing content of the player score divs
-        player1Score.innerHTML = "";
-        player2Score.innerHTML = "";
-      
-        // Append the winner's avatar to the appropriate player's score div
-        if (player === player1) {
-          player1Score.appendChild(winnerAvatar);
-        } else {
-          player2Score.appendChild(winnerAvatar);
-        }
+        // Display a message that the player has won along with the rapper's name and emoji
+        const winnerMessage = `${player.name} wins!<br>${selectedRapperName} ${player.emoji}`;
+        currentWinnerName.innerHTML = winnerMessage;
       
         // Add the 'winner' class to the appropriate player's scoreboard element
         if (player === player1) {
-          player1Score.classList.add('winner');
-          player2Score.classList.remove('winner');
+          player1Scoreboard.classList.add('winner');
+          player2Scoreboard.classList.remove('winner');
         } else {
-          player2Score.classList.add('winner');
-          player1Score.classList.remove('winner');
+          player2Scoreboard.classList.add('winner');
+          player1Scoreboard.classList.remove('winner');
         }
       
-        player.wins++;
-        updateScoreboard();
+        // Hide effects after a timeout
+        setTimeout(() => {
+          currentWinnerName.innerHTML = ''; // Clear winner's name
+          player1Scoreboard.classList.remove('winner'); // Remove winner class
+          player2Scoreboard.classList.remove('winner'); // Remove winner class
+        }, 5000); // You can adjust the timeout duration if needed
       }
-      
-
-      function showDraw() {
-       
-        currentWinnerName.textContent = "It's a draw!";
-      }
-      
     // Event listeners for buttons and squares
     startButton.addEventListener("click", startGame);
     replayButton.addEventListener("click", replayGame);

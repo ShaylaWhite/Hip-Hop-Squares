@@ -8,7 +8,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #fcfcfc;
-  background-image: url('wp4818128.jpg');
+  background-image: url('images/wp4818128.jpg');
   background-size: cover;
 }
 /* Container for each section */
@@ -167,113 +167,84 @@ body {
   text-align: center;
   margin: 20px auto;
 }
-/* Style for the scoreboard */
-.scoreboard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-}
 
-/* Style for each player's score section */
-.player1-score,
-.player2-score {
-  display: flex;
-  align-items: center;
-}
-
-/* Style for player avatars */
-.player1-avatar img,
-.player2-avatar img {
-  width: 50px; /* Adjust the width as needed */
-  height: 50px; /* Adjust the height as needed */
-  border-radius: 50%; /* Make the image circular */
-  object-fit: cover; /* Maintain the aspect ratio and cover the container */
-  margin-right: 10px;
-}
-
-/* Style for player information */
-.player1-info,
-.player2-info {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Add a golden glow effect for the winning player's avatar */
-.player1-score.winner .player1-avatar,
-.player2-score.winner .player2-avatar {
-  border: 5px solid gold;
-  border-radius: 50%;
-  box-shadow: 0 0 10px gold;
-}
-
-/* Add a winning effect for the player's emoji */
-.player1-score.winner .player1-emoji,
-.player2-score.winner .player2-emoji {
+/* Style for the current winner name */
+#current-winner-name {
   font-size: 2em;
-  animation: pulse 1s infinite alternate;
+  animation: riseAndSlam 1s forwards;
 }
 
-@keyframes pulse {
+@keyframes riseAndSlam {
   0% {
-    transform: scale(1);
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;
   }
   100% {
-    transform: scale(1.2);
+    transform: translateY(0);
+    opacity: 1;
   }
-} 
-
-/* Style for the scoreboard */
-.scoreboard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+}
+/* Spinning Animation for Winner's Name */
+.spin {
+  animation: spinAndSlam 2s forwards;
 }
 
-/* Style for each player's score section */
-.player1-score,
-.player2-score {
-  display: flex;
-  align-items: center;
-}
-
-/* Style for player avatars */
-.player1-avatar img,
-.player2-avatar img {
-  width: 50px; /* Adjust the width as needed */
-  height: 50px; /* Adjust the height as needed */
-  border-radius: 50%; /* Make the image circular */
-  object-fit: cover; /* Maintain the aspect ratio and cover the container */
-  margin-right: 10px;
-}
-
-/* Style for player information */
-.player1-info,
-.player2-info {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Add a golden glow effect for the winning player's avatar */
-.scoreboard.winner .player1-avatar img,
-.scoreboard.winner .player2-avatar img {
-  border: 5px solid gold;
-  box-shadow: 0 0 10px gold;
-}
-
-/* Add a winning effect for the player's emoji */
-.scoreboard.winner .player1-emoji,
-.scoreboard.winner .player2-emoji {
-  font-size: 2em;
-  animation: pulse 1s infinite alternate;
-}
-
-@keyframes pulse {
+@keyframes spinAndSlam {
   0% {
-    transform: scale(1);
+    transform: rotate(0) translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(360deg) translateY(-20px);
+    opacity: 1;
   }
   100% {
-    transform: scale(1.2);
+    transform: rotate(720deg) translateY(0);
+    opacity: 1;
   }
 }
+
+/* Winner Animation */
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(-20px);
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+  0%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Golden Highlight Effect */
+.winner {
+  border: 5px solid gold;
+  box-shadow: 0 0 10px gold;
+  animation: pulse 2s infinite alternate;
+  animation-fill-mode: forwards;
+}
+
+/* Pulsating Scoreboard Background */
+.scoreboard.winner {
+  animation: pulsateBackground 2s infinite alternate;
+}
+
+@keyframes pulsateBackground {
+  0%, 100% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: gold;
+  }
+}
+
+/* Reset and default styles (Rest of your CSS) */
+/* ... */
