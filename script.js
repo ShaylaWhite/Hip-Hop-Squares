@@ -44,7 +44,19 @@ document.addEventListener("DOMContentLoaded", function() {
       Jeezy: '❄️',
       Dolph: '🐬',
       SnoopDogg: '🌿',
-    };
+    }; 
+
+    const rapperImages = {
+        Drake: 'images/drake.jpg',
+        Kendrick: 'images/kendrick.jpg',
+        CardiB: 'images/cardib.jpg',
+        JayZ: 'images/jayz.jpg',
+        Nipsey: 'images/nipsey.jpg',
+        MeganTheeStallion: 'images/megan.jpg',
+        Jeezy: 'images/jeezy.jpg',
+        Dolph: 'images/dolph.jpg',
+        SnoopDogg: 'images/snoopdogg.jpg',
+      };
   
     // Function to initialize player avatar dropdowns with options
     function initializeAvatarDropdowns() {
@@ -163,9 +175,35 @@ function startGame() {
         // Display a message that the player has won along with the rapper's name
         currentWinnerName.textContent = `${player.name} wins! (${selectedRapperName})`;
       
+        // Create an <img> element for the winning player's avatar
+        const winnerAvatar = document.createElement("img");
+        winnerAvatar.src = rapperImages[selectedRapperName];
+        winnerAvatar.alt = `${player.name} Avatar`;
+      
+        // Clear the existing content of the player score divs
+        player1Score.innerHTML = "";
+        player2Score.innerHTML = "";
+      
+        // Append the winner's avatar to the appropriate player's score div
+        if (player === player1) {
+          player1Score.appendChild(winnerAvatar);
+        } else {
+          player2Score.appendChild(winnerAvatar);
+        }
+      
+        // Add the 'winner' class to the appropriate player's scoreboard element
+        if (player === player1) {
+          player1Score.classList.add('winner');
+          player2Score.classList.remove('winner');
+        } else {
+          player2Score.classList.add('winner');
+          player1Score.classList.remove('winner');
+        }
+      
         player.wins++;
         updateScoreboard();
       }
+      
 
       function showDraw() {
        
