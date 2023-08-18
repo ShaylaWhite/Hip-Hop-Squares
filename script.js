@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const player2Emoji = document.querySelector(".player2-emoji");
     const player1Wins = document.querySelector(".player1-wins");
     const player2Wins = document.querySelector(".player2-wins");
+
+
+    player1AvatarDropdown.addEventListener("change", updatePlayer1Emoji);
+    player2AvatarDropdown.addEventListener("change", updatePlayer2Emoji);
   
     // Initialize player objects with default values
     let player1 = {
@@ -56,7 +60,19 @@ document.addEventListener("DOMContentLoaded", function() {
         player2AvatarDropdown.appendChild(option2);
       }
     }
+  // Function to update Player 1's emoji
+function updatePlayer1Emoji() {
+    const selectedRapper = player1AvatarDropdown.value;
+    player1.emoji = rapperEmojis[selectedRapper];
+    player1Emoji.textContent = player1.emoji;
+  }
   
+  // Function to update Player 2's emoji
+  function updatePlayer2Emoji() {
+    const selectedRapper = player2AvatarDropdown.value;
+    player2.emoji = rapperEmojis[selectedRapper];
+    player2Emoji.textContent = player2.emoji;
+  }
     // Function to initialize the game and player avatars
     function initializeGame() {
       initializeAvatarDropdowns();
@@ -170,6 +186,7 @@ function startGame() {
       }
     });
   });
+  
   
 //   //// HALL OF FAME ////
 // // Function to update the Hall of Fame table
