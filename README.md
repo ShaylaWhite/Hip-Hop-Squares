@@ -210,6 +210,9 @@ The result? A victorious finish over challenges, with each one adding to my lear
     - Incorporate sound effects for moves and button clicks. ✅
     - Integrate audio playback for each player's victory. ✅
     - Test sound and music across different scenarios. ✅
+    - When user click another square. DJ Khaled says: ANOTHER ONE 
+![DJ Khaled "Another One"](https://gifdb.com/images/high/dj-khaled-encouraging-to-do-another-one-y547yj5lofzf8ilt.gif)
+
 
 ### 🥇 Gold Plan
 1. **Implement Additional Features:**
