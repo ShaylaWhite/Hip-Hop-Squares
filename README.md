@@ -228,7 +228,8 @@ Take a sneak peek at the electrifying moments that **Hip Hop Squares** has to of
 
 Curious to see the game in action? Check out this video to get a taste of the vibrant, engaging, and rhythm-infused world of **Hip Hop Squares**!
 
-[![Hip Hop Squares Preview Video](https://img.youtube.com/vi/d2DUSgJyxOE/0.jpg)](https://www.youtube.com/watch?v=d2DUSgJyxOE)
+[![Hip Hop Squares Preview Video](images/wp4818128.jpg)](https://www.youtube.com/watch?v=d2DUSgJyxOE)
+
 
 
 
