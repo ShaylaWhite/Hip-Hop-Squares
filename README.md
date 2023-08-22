@@ -35,8 +35,6 @@ Hip Hop Squares isn't just your regular tic-tac-toe game; it's a high-energy sho
 
 
 
-
-
 ---
 
 ## THE LEGENDARY LINEUP 
@@ -73,6 +71,9 @@ Hip Hop Squares isn't just your regular tic-tac-toe game; it's a high-energy sho
 - **Superpower:** "Hot Girl Energy" - Can distract the opponent with powerful charisma.
 
 ---
+## Wireframe:
+![image](https://github.com/ShaylaWhite/Hip-Hop-Squares/assets/45671858/79fab2e4-823c-4f67-8f76-caf7e6a099d1)
+
 ## Insipration: 
 ![Hip Hop Squares Banner](images/wp4818128.jpg)
 
@@ -102,7 +103,7 @@ Hip Hop Squares isn't just your regular tic-tac-toe game; it's a high-energy sho
 
 ---
 
-## Development Phases
+## Planning-and-development-process
 
 ### Phase 1: Organize Code
 
@@ -227,9 +228,10 @@ Take a sneak peek at the electrifying moments that **Hip Hop Squares** has to of
 
 Curious to see the game in action? Check out this video to get a taste of the vibrant, engaging, and rhythm-infused world of **Hip Hop Squares**!
 
-[![Hip Hop Squares Preview Video](images/crown.png)](Hip-Hop-Squares\images\Recording%202023-08-21%20222024.mp4)
+[![Hip Hop Squares Preview Video](images/wp4818128.jpg)](Hip-Hop-Squares\images\Recording%202023-08-21%20222024.mp4)
 
-##Highlights of the Preview:
+
+## Highlights of the Preview:
 - **Winner Display:** Watch in awe as the victory screen lights up, announcing the hip-hop mastermind of the game.
 - **Scoreboard:** Stay updated with the leaderboard that showcases the top players' scores in the true spirit of competition.
 - **Draw Scenario:** Experience the thrill of a tie, where the game acknowledges a draw and sets the stage for another round of intense hip-hop tic-tac-toe.
