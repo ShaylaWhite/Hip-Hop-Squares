@@ -222,13 +222,31 @@ The result? A victorious finish over challenges, with each one adding to my lear
 
 ---
 
-## Gameplay Highlights
+## Hip Hop Squares Preview
 
-Take a sneak peek at the electrifying moments that **Hip Hop Squares** has to offer:
 
 Curious to see the game in action? Check out this video to get a taste of the vibrant, engaging, and rhythm-infused world of **Hip Hop Squares**!
 
-[![Hip Hop Squares Preview Video](images/wp4818128.jpg)](https://www.youtube.com/watch?v=d2DUSgJyxOE)
+Take a sneak peek at the electrifying moments that **Hip Hop Squares** has to offer:
+
+### 1. Gameplay Highlights
+
+![Gameplay GIF](https://media.giphy.com/media/UT6kp16NulxxNHsi1l/giphy.gif)
+
+See players selecting rappers, starting the game, and the game correctly displaying a draw result
+
+### 2. Replay and Winner Showcase
+
+![Replay and Winner GIF](https://media.giphy.com/media/OtHBdEWhp59tcX2fj8/giphy.gif)
+
+Observe how the replay button resets the board and displays the winner's name on the scoreboard.
+
+### 3. Replay Button in Action
+
+![Replay Button GIF](https://media.giphy.com/media/YuHTuWQBnE3bw5CCNN/giphy.gif)
+
+Watch how the replay button resets the game board and lets players select rappers with their unique emojis.
+
 
 
 
