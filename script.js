@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const player2Emoji = document.querySelector(".player2-emoji");
   const player1Wins = document.querySelector(".player1-wins");
   const player2Wins = document.querySelector(".player2-wins");
+  const boardClickAudio = document.getElementById('board-click-audio');
 
   // Initialize player objects with default values
   let player1 = {
@@ -106,24 +107,28 @@ function replayGame() {
 startButton.addEventListener("click", startGame);
 replayButton.addEventListener("click", replayGame);
 
+// Get the audio element
 
-  function handleMove(squareIndex) {
-      if (!isGameOver && gameBoard[squareIndex] === "") {
-        gameBoard[squareIndex] = currentPlayer;
-        squares[squareIndex].textContent = currentPlayer.emoji;
-  
-        if (checkForWinner(currentPlayer)) {
-          isGameOver = true;
-          showWinner(currentPlayer);
-        } else if (gameBoard.every(square => square !== "")) {
-          isGameOver = true;
-          showDraw();
-        } else {
-          currentPlayer = currentPlayer === player1 ? player2 : player1;
-        }
-      }
+function handleMove(squareIndex) {
+  if (!isGameOver && gameBoard[squareIndex] === "") {
+    gameBoard[squareIndex] = currentPlayer;
+    squares[squareIndex].textContent = currentPlayer.emoji;
+
+    // Play the board click audio
+    boardClickAudio.play();
+
+    if (checkForWinner(currentPlayer)) {
+      isGameOver = true;
+      showWinner(currentPlayer);
+    } else if (gameBoard.every(square => square !== "")) {
+      isGameOver = true;
+      showDraw();
+    } else {
+      currentPlayer = currentPlayer === player1 ? player2 : player1;
     }
-  
+  }
+}
+
     
     function checkForWinner(player) {
       // Example: Check the gameBoard for winning combinations
@@ -157,20 +162,20 @@ replayButton.addEventListener("click", replayGame);
       currentWinnerName.textContent = "It's a draw!";
     }
     
-  // Event listeners for buttons and squares
-  startButton.addEventListener("click", startGame);
-  replayButton.addEventListener("click", replayGame);
-  squares.forEach((square, index) => {
-    square.addEventListener("click", () => handleMove(index));
+    // Event listeners for buttons and squares
+    startButton.addEventListener("click", startGame);
+    replayButton.addEventListener("click", replayGame);
+    squares.forEach((square, index) => {
+      square.addEventListener("click", () => handleMove(index));
+    });
+  
+    // Prevent form submission on Enter key press
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+      }
+    });
   });
-
-  // Prevent form submission on Enter key press
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-    }
-  });
-});
   
 //   //// HALL OF FAME ////
 // // Function to update the Hall of Fame table
