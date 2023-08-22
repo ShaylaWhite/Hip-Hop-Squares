@@ -26,6 +26,7 @@ Get ready to drop beats, make moves, and dominate the board in this funky twist 
 - **Hosting:** GitHub Pages
 - **Version Control:** Git, GitHub
 - **Charset Emoji Reference:** [Emoji Cheat Sheet](https://www.w3schools.com/charsets/ref_emoji.asp)
+- **Select2 Library:**[Select 2](https://select2.org/)
 
 ---
 
@@ -208,9 +209,8 @@ The result? A victorious finish over challenges, with each one adding to my lear
 3. **Customize styling based on the selected rapper avatars.** ✅
 4. **Integrate sound effects and music:**
     - Incorporate sound effects for moves and button clicks. ✅
-    - Integrate audio playback for each player's victory. ✅
     - Test sound and music across different scenarios. ✅
-    - When user click another square. DJ Khaled says: ANOTHER ONE 
+    - When user click another square. DJ Khaled says: ANOTHER ONE  ✅
 ![DJ Khaled "Another One"](https://gifdb.com/images/high/dj-khaled-encouraging-to-do-another-one-y547yj5lofzf8ilt.gif)
 
 
@@ -222,6 +222,8 @@ The result? A victorious finish over challenges, with each one adding to my lear
    - Create player ranks based on the number of wins. (Pending)
    - Add customization options for background and fonts. (Pending)
    - Introduce dynamic grid sizing or alternate win patterns. (Pending)
+   - Integrate audio playback for each player's victory. (Pending)
+
 
 ---
 
