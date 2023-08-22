@@ -1,0 +1,68 @@
+
+PHASE NUMBER 1 >>>>>>> Organize Code
+
+Phase 1:
+
+Player Avatars: The dropdowns player1-avatar and player2-avatar should be populated with options corresponding to the rapper names, along with their corresponding emojis.
+
+Initialization: When the page loads, the dropdowns should have their default values 
+
+Game State and Logic:
+    currentPlayer: To keep track of whose turn it is (Player 1 or Player 2).
+    gameBoard: An array or object to represent the state of the game board (empty, X, or O).
+    winner: To keep track of the current winner (Player 1, Player 2, or null for no winner).
+    isGameOver: To check if the game is over.
+    totalMoves: To keep track of the total number of moves played.
+
+Players and Avatars:
+    player1: An object containing information about Player 1 (name, selected avatar, wins).
+    player2: An object containing information about Player 2 (name, selected avatar, wins).
+    avatarEmojis: An object mapping player avatars to their respective emojis.
+
+DOM Elements:
+    startButton: Reference to the Start Game button.
+    replayButton: Reference to the Replay button.
+    player1AvatarDropdown: Reference to the Player 1 avatar dropdown element.
+    player2AvatarDropdown: Reference to the Player 2 avatar dropdown element.
+    squares: References to the individual squares of the game board.
+    hallOfFameTable: Reference to the Hall of Fame table for displaying player statistics.
+
+Other:
+    winningCombinations: An array of arrays representing the winning combinations on the game board.
+    Game Functions:
+
+Functions:
+    initializeGame(): To set up the initial game state and UI.
+    startGame(): To start a new game when the Start Game button is clicked.
+    replayGame(): To replay the game when the Replay button is clicked.
+    handleMove(): To handle the player's move (placing X or O on the game board).
+    checkForWinner(): To check if there is a winner after each move.
+    updateScoreboard(): To update the scoreboard with player wins.
+    updateHallOfFame(): To update the Hall of Fame table with player statistics.
+
+
+
+PHASE NUMBER 2 >> Game Logic Implementation:
+   Phase 2:
+
+Start Game: Clicking the "Start Game" button should trigger the startGame() function, which resets the game state. This includes clearing the game board, enabling the dropdowns, and disabling the "Start Game" button.
+
+Dropdowns and Buttons: After starting the game, the dropdowns should be disabled, and the "Start Game" button should be disabled to prevent starting a new game until the current one is finished.
+
+Game Board: The game board should consist of the squares with the appropriate classes, as selected by querying for .square.
+
+Handle Moves: Clicking on the squares should trigger the handleMove() function. It will update the game board with the selected player's emoji, switch turns between players, and check for a win or a draw condition.
+
+Winner and Draw: If a player wins or the game ends in a draw, the appropriate function (showWinner() or showDraw()) should be called to indicate the result.content is fully loaded.
+
+
+
+PHASE NUMBER 3 >> Score Tracking and Replay:
+    Updating the players' win counts when a player wins a round.
+    Providing a "Replay" button that resets the game board and starts a new round.
+    Updating the Hall of Fame table to display the players' win counts.
+
+
+
+PHASE NUMBER 4 >> Styling and Final Touches:
+
